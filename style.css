@@ -80,6 +80,36 @@ footer {
   font-size: 25px;
   padding: 10px 15px;
 }
+.action-icons .material-icons {
+  font-size: 20px;
+  color: #865dff;
+}
+.mInfo {
+  display: block;
+  font-size: 10px;
+  bottom: 50px;
+}
+.text {
+    white-space: nowrap;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  background-color: #e0d9f5;
+  color: #865dff;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  width: 400px;
+  padding: 10px 15px;
+  height: 49px;
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  border-color: transparent;
+}
 input::placeholder {
   color: rgb(241, 172, 172);
   font-size: 32px;

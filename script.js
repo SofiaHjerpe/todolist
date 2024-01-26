@@ -24,13 +24,13 @@ form.addEventListener("submit", (e) => {
   const todo = document.querySelector(".text");
   const author = document.querySelector(".author");
 
-const newTodo = {
+  const newTodo = {
     author: author.value,
     todo: todo.value,
     done: false,
     timestamp: new Date().getTime(),
   };
- const newTodoElement = createTodoItemAsHtml(newTodo);
+  const newTodoElement = createTodoItemAsHtml(newTodo);
   const todoItem = document.querySelector(".todos");
   todoItem.insertAdjacentHTML("beforebegin", newTodoElement);
 });
@@ -43,11 +43,10 @@ function createTodoItemAsHtml(todoItem) {
       </div>
       <div class="action-icons">
         <span class="material-icons delete">delete</span>
-        <span class="material-icons moreInfo">info</span>
-        <div class="moreInfo">
-        <span class="author">author:  ${todoItem.author}</span>
-         <span class="date">date: ${todoItem.timestamp}</span>
-      </div>
+         <span class="material-icons moreInfo">info</span>
+        <span class="mInfo"> author: ${todoItem.author} date: ${todoItem.timestamp}</span>
+          
+      
       </div> 
     </article>
 `;
