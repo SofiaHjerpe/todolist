@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Todo app</title>
+  </head>
+  <body>
+    <header>
+      <button class="btn-primary">To Do</button>
+      <button class="btn-secondary">Done</button>
+      <button class="btn-icon"><span class="material-icons">sort</span></button>
+    </header>
+    <main>
+      <form>
+        <div class="inputs">
+        <input id="text" class="addItem text" type="text" placeholder="+ Add Item"  />
+        <input id="author" class="addItem author" type="text" placeholder="+ Author"  />
+        </div>
+        <button type="submit" class="btn-primary add">Add</button>
+      </form>
+
+      <h3 class="info">Create a to-do from top</h3>
+
+      <section class="todos"></section>
+    </main>
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  margin-top: 50px;
+  margin-inline: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-primary {
+  background-color: #865dff;
+  border-color: transparent;
+  border-radius: 30px;
+  color: #e0d9f5;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  width: 200px;
+  height: 70px;
+}
+.add {
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+.inputs {
+  display: flex;
+  gap: 20px;
+}
+.btn-secondary {
+  border-radius: 30px;
+  border-color: transparent;
+  background-color: #e0d9f5;
+  color: #865dff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  width: 200px;
+  height: 70px;
+}
+.btn-icon {
+  color: #865dff;
+  background-color: transparent;
+  outline: none;
+  border-color: transparent;
+}
+.material-icons {
+  font-size: 60px;
+}
+.addItem {
+  background-color: #f5d6d6;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 400px;
+  height: 43px;
+  display: flex;
+  color: rgb(241, 172, 172);
+  align-items: center;
+  outline: none;
+  font-size: 25px;
+  padding: 10px 15px;
+}
+input::placeholder {
+  color: rgb(241, 172, 172);
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  header {
+    gap: 15px;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .material-icons {
+    font-size: 40px;
+  }
+  .btn-primary {
+    border-radius: 20px;
+    font-size: 30px;
+    width: 140px;
+    height: 50px;
+  }
+  input::placeholder {
+    font-size: 25px;
+  }
+  .addItem {
+    width: 340px;
+    height: 35px;
+  }
+  .btn-secondary {
+    border-radius: 20px;
+    font-size: 30px;
+    width: 140px;
+    height: 50px;
+  }
+}
