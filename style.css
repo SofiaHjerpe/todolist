@@ -42,6 +42,8 @@ footer {
   height: 40px;
   border-radius: 15px;
   font-size: 25px;
+  margin-top: 10px;
+  margin-inline: 750px 0;
 }
 .inputs {
   display: flex;
@@ -67,6 +69,9 @@ footer {
 .material-icons {
   font-size: 60px;
 }
+.form {
+  margin-top: 20px;
+}
 .addItem {
   background-color: #f5d6d6;
   border-radius: 10px;
@@ -80,17 +85,27 @@ footer {
   font-size: 25px;
   padding: 10px 15px;
 }
+
 .action-icons .material-icons {
   font-size: 20px;
   color: #865dff;
 }
-.mInfo {
-  display: block;
-  font-size: 10px;
+.moreInfo {
+  width: 20px;
   bottom: 50px;
 }
+.moreInfo:hover {
+  .mInfo {
+    display: block;
+  }
+}
+.mInfo {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  display: none;
+}
 .text {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .todo-item {
@@ -110,6 +125,11 @@ footer {
   font-size: 25px;
   border-color: transparent;
 }
+.info {
+    font-family: "Inter", sans-serif;
+    color: #999;
+    font-weight: 600;
+}
 input::placeholder {
   color: rgb(241, 172, 172);
   font-size: 32px;
@@ -120,6 +140,7 @@ input::placeholder {
   header {
     gap: 15px;
   }
+
   .inputs {
     display: flex;
     flex-direction: column;
@@ -134,12 +155,25 @@ input::placeholder {
     width: 140px;
     height: 50px;
   }
+  .add {
+    width: 110px;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-inline: 120px 0;
+  }
   input::placeholder {
     font-size: 25px;
   }
   .addItem {
-    width: 340px;
-    height: 35px;
+    width: 300px;
+    height: 39px;
+  }
+  .todo-item {
+    width: 300px;
+    padding: 10px 15px;
+    height: 39px;
+    font-size: 16px;
   }
   .btn-secondary {
     border-radius: 20px;
