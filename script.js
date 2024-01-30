@@ -19,25 +19,10 @@ const defaultTodos = [
     timestamp: new Date().getTime(),
   },
 ];
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const todo = document.querySelector(".text");
-  const author = document.querySelector(".author");
-
-  const newTodo = {
-    author: author.value,
-    todo: todo.value,
-    done: false,
-    timestamp: new Date().getTime(),
-  };
-  const newTodoElement = createTodoItemAsHtml(newTodo, defaultTodos.length);
-  const todoItem = document.querySelector(".todos");
-  todoItem.insertAdjacentHTML("beforebegin", newTodoElement);
-});
-
 function createTodoItemAsHtml(todoItem, index) {
   return `<article class="todo-item">
-    <div class="action-icons"><input type="checkbox" data-index="${index}" class="done"></span> </div>
+    <div class="action-icons"><input type="checkbox" data-index="${index}" class="done"
+     ${todoItem.done ? "checked" : ""}></input></div>
       <div class="content">
         <span class="text">${todoItem.todo}</span>
       </div>
@@ -53,9 +38,36 @@ function createTodoItemAsHtml(todoItem, index) {
 `;
 }
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const todo = document.querySelector(".text");
+  const author = document.querySelector(".author");
+
+  const newTodo = {
+    author: author.value,
+    todo: todo.value,
+    done: false,
+    timestamp: new Date().getTime(),
+  };
+
+  defaultTodos.push(newTodo);
+  const newTodoElement = createTodoItemAsHtml(newTodo, defaultTodos.length - 1);
+  const todoItem = document.querySelector(".todos");
+  todoItem.insertAdjacentHTML("beforeend", newTodoElement);
+
+  todoItem.addEventListener("change", function (e) {
+    if (e.target.matches(".done")) {
+      let todoIndex = e.target.getAttribute("data-index");
+      defaultTodos[todoIndex].done = e.target.checked;
+    }
+  });
+});
+  
+
 const defaultTodosAsHtml = defaultTodos.map((todo, index) => {
   return createTodoItemAsHtml(todo, index);
 });
+
 console.log(defaultTodosAsHtml);
 const htmlString = defaultTodosAsHtml.join(" ");
 const todoItems = document.querySelector(".todos");
